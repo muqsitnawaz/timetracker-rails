@@ -8,6 +8,9 @@ class Project < ActiveRecord::Base
 	validates :company, presence: true
 	validates :default_rate, numericality: {only_integer: true, greater_than: 50, less_than: 1000 }
 
+	validates :slug, length: {minimum: 3}
+	validates :slug, uniqueness: true
+
 	# adding scopes
 	scope :lowdefaultrate, -> {where("default_rate < 100")}
 end

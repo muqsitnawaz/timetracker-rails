@@ -1,10 +1,9 @@
 class CompaniesController < ApplicationController
 	def index
-
+		@companies = Company.all;
 	end
 
 	def show
-		@companies_id = params[:id]
-		@greeting = "Hello to the company with id: "
+		@company = Company.find(params[:id]);
 	end
 end

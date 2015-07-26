@@ -1,0 +1,5 @@
+<h1> <%= @project.name %> </h1>
+<p style="font-weight: normal;"> Company: <%= @project.company.name %> </p>
+<p>Default Rate: <%= @project.default_rate %></p>
+
+<p><%= link_to 'All Projects', projects_path %></p>
