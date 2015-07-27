@@ -13,4 +13,8 @@ class Project < ActiveRecord::Base
 
 	# adding scopes
 	scope :lowdefaultrate, -> {where("default_rate < 100")}
+
+	def to_s
+		"#{name} (#{company})"
+	end
 end

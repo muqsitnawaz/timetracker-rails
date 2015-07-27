@@ -80,6 +80,10 @@ header nav li a:hover, header nav li.active a {
 	color:#fff;
 }
 
+#main ul {
+	list-style-type: decimal;
+}
+
 #main {
 	padding:2%;
 	background-color: #fff;

@@ -1,2 +1,17 @@
 <h1> <%= @company.name %> </h1>
 <p> <%= @company.id %> </p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Project</th>
+			<th>Company</th>
+		</tr>
+
+		<%= render partial: "projects/project", collection: @company.projects %>
+</tbody>
+</table>
+
+<% content_for :aside do %>
+	<% render 'sidebar' %>
+<% end %>
