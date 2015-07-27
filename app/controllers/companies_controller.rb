@@ -13,4 +13,15 @@ class CompaniesController < ApplicationController
 			format.json {render json: @company}
 		end
 	end
+
+	# methods for creating a new company
+	def new
+		@company = Company.new
+	end
+
+	def create
+		@company = Company.new(params[:company].permit(:name))
+		@company.save
+		redirect_to @company
+	end
 end

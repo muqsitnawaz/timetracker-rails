@@ -1,0 +1,16 @@
+form div {
+	margin: 0 0 15px 0;
+}
+
+form label {
+	font-style: italic;
+}
+
+form input {
+	padding: 5px;
+	margin-right: 0px;
+}
+
+form #submit-company {
+	padding-left: 45px;
+}
